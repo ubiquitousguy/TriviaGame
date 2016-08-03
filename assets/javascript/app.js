@@ -1,18 +1,15 @@
 var questions = [{
-    question: "Who's Seinfeld's neighbor?",
+    question: "Who's Seinfeld's next door neighbor?",
     choices: ["Newman", "George", "Elaine", "Kramer"],
-    correctAnswer: 3
-    pic: <img src="images/kramer.jpg">},
+    correctAnswer: 3 },
 
     { question: "When _____ Met Sally?",
     choices: ["John", "Harry", "Tom", "Elliot"],
-    correctAnswer: 1
-    pic: <img src="harry.jpg"> },
+    correctAnswer: 1},
 
    { question: "What's the bartender's name in Cheers?",
     choices: ["Sam", "James", "Norman", "George"],
-    correctAnswer: 0
-    pic: <img src="sam.jpg"> },
+    correctAnswer: 0 },
 
    { question: "Who plays Forest Gump?",
     choices: ["Tom Hanks", "Billy Crystal", "Keanu Reeves", "Tom Cruise"],
@@ -25,12 +22,12 @@ var questions = [{
     var currentQuestion = 0;
     var correctAnswers = 0;
     var quizOver = false;
-    var count = 3;
+    var count = 30;
     var counter=setInterval(timer,1000);
 
       function timer() {
         count=count-1;
-        if (count <=0) {
+        if (count == 0) {
           alert('GAME OVER!!!');
           clearInterval(counter);
           // return;
@@ -113,7 +110,6 @@ function resetQuiz() {
 function displayScore() {
   $(document).find(".quizBox > .result").text("You scored: " + correctAnswers + " out of: " + questions.length);
   $(document).find(".quizBox > .result").show();
-  $('#imagediv').html('<img src='+questions[currentQuestion].pic+'>');
 }
 
 function hideScore() {
