@@ -24,8 +24,10 @@ var questions = [{
     var quizOver = false;
     var count = 30;
     var counter=setInterval(timer,1000);
+    var resetCounter = 30;
 
       function timer() {
+
         count=count-1;
         if (count == 0) {
           alert('GAME OVER!!!');
@@ -68,6 +70,7 @@ $(document).ready(function(){
                   //                    $(document).find(".playAgainButton").toggle();
                   // Change the text in the next button to ask if user wants to play again
                   $(document).find(".nextButton").text("Play Again?");
+
                   quizOver = true;
 
               }
@@ -103,6 +106,8 @@ function displayCurrentQuestion() {
 function resetQuiz() {
   currentQuestion = 0;
   correctAnswers = 0;
+  count = 30;
+  $('#timer').html(count);
   hideScore();
 
 }
@@ -115,5 +120,6 @@ function displayScore() {
 function hideScore() {
   $(document).find(".result").hide();
 }
+
 
 });
