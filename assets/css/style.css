@@ -30,7 +30,7 @@ p {
 }
 /* Quiz Classes */
  .quizBox {
-    background-color: blue;
+    background-color: gold;
     border-radius: 6px;
     width: 50%;
     margin: auto;
@@ -78,9 +78,10 @@ p {
 }
 .choiceList {
     font-family: Courier, serif;
-    color: white;
+    color: black;
     margin-top: 20px;
     margin-bottom: 20px;
+    text-align: center;
 }
 .result {
     width: 30%;
